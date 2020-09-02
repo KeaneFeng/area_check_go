@@ -34,8 +34,8 @@ func CheckArea(writer http.ResponseWriter, request *http.Request) {
 	}
 		//实例化redis
 		client := redis.NewClient(&redis.Options{
-			Addr:     "47.113.224.83:6383",
-			Password: "ycabc6383", // no password set
+			Addr:     "127.0.0.1:6379",
+			Password: "123456", // no password set
 			DB:       2,  // use default DB
 		})
 		_, redisErr := client.Ping(ctx).Result()
